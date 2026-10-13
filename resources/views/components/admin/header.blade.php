@@ -49,7 +49,7 @@
                     class="absolute right-0 mt-3 w-48 rounded-md border border-slate-100 bg-white py-1 shadow-lg"
                     style="display: none;"
                 >
-                    <a href="{{ route('profile.edit') }}" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">
+                    <a href="#" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">
                         Mi Perfil
                     </a>
                     

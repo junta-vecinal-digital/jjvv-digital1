@@ -1,6 +1,6 @@
 <x-admin-layout>
     <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <h2 class="text-title-md2 font-bold text-slate-800 text-2xl">
+        <h2 class="text-2xl font-bold text-slate-800">
             Resumen General
         </h2>
     </div>
@@ -8,12 +8,12 @@
     <!-- Tarjetas del Dashboard -->
     <div class="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-6 2xl:gap-7.5">
         
-        <!-- Tarjeta 1: Total Socios -->
+        <!-- Tarjeta 1: Total Socios Activos -->
         <div class="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
             <div class="flex items-center justify-between">
                 <div>
-                    <span class="text-sm font-medium text-slate-500">Socios Registrados</span>
-                    <h4 class="text-2xl font-bold text-slate-800 mt-1">0</h4>
+                    <span class="text-sm font-medium text-slate-500">Socios Activos</span>
+                    <h4 class="text-2xl font-bold text-slate-800 mt-1">{{ $totalSocios }}</h4>
                 </div>
                 <div class="flex h-11 w-11 items-center justify-center rounded-full bg-indigo-50 text-indigo-600">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -28,7 +28,7 @@
             <div class="flex items-center justify-between">
                 <div>
                     <span class="text-sm font-medium text-slate-500">Pendientes Firma Libro</span>
-                    <h4 class="text-2xl font-bold text-amber-600 mt-1">0</h4>
+                    <h4 class="text-2xl font-bold text-amber-600 mt-1">{{ $pendientesFirma }}</h4>
                 </div>
                 <div class="flex h-11 w-11 items-center justify-center rounded-full bg-amber-50 text-amber-600">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -42,8 +42,8 @@
         <div class="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
             <div class="flex items-center justify-between">
                 <div>
-                    <span class="text-sm font-medium text-slate-500">Certificados Emitidos</span>
-                    <h4 class="text-2xl font-bold text-slate-800 mt-1">0</h4>
+                    <span class="text-sm font-medium text-slate-500">Certificados Este Mes</span>
+                    <h4 class="text-2xl font-bold text-slate-800 mt-1">{{ $totalCertificados }}</h4>
                 </div>
                 <div class="flex h-11 w-11 items-center justify-center rounded-full bg-emerald-50 text-emerald-600">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

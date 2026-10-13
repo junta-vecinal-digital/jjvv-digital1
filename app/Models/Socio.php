@@ -20,12 +20,15 @@ class Socio extends Model
         'ruta_cedula',
         'ruta_comprobante_domicilio',
         'estado',
+        'fecha_cita_firma',
+        'observaciones_cita',
         'fecha_firma_libro',
         'registrado_por_user_id',
     ];
 
     protected $casts = [
         'fecha_nacimiento' => 'date',
+        'fecha_cita_firma' => 'datetime',
         'fecha_firma_libro' => 'datetime',
     ];
 
