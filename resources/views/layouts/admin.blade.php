@@ -1,29 +1,31 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Junta de Vecinos Digital') }}</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ $title ?? 'JJVV Digital' }}</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="bg-gray-100 text-slate-800 antialiased" x-data="{ sidebarOpen: false }">
+<body 
+    x-data="{ sidebarOpen: false }" 
+    class="font-sans antialiased bg-slate-100 text-slate-900"
+>
     <div class="flex h-screen overflow-hidden">
         
-        <!-- Sidebar de TailAdmin -->
+        <!-- Sidebar Component -->
         <x-admin.sidebar />
 
-        <!-- Contenido principal -->
+        <!-- Content Area -->
         <div class="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden">
-            <!-- Header de TailAdmin -->
+            
+            <!-- Header Component -->
             <x-admin.header />
 
-            <!-- Área de trabajo -->
-            <main class="p-4 md:p-6 2xl:p-10">
+            <!-- Main Content -->
+            <main class="w-full grow p-4 md:p-6 2xl:p-10">
                 {{ $slot }}
             </main>
+
         </div>
     </div>
 </body>
