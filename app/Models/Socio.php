@@ -42,6 +42,11 @@ class Socio extends Model
         return $this->belongsTo(User::class, 'registrado_por_user_id');
     }
 
+    public function cita()
+    {
+        return $this->hasOne(Cita::class);
+    }
+
     public function certificados(): HasMany
     {
         return $this->hasMany(Certificado::class);
