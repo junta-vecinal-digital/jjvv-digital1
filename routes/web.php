@@ -33,6 +33,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('/dashboard', function () {
             $totalSocios = Socio::where('estado', 'activo')->count();
             $pendientesFirma = Socio::whereIn('estado', ['pendiente_firma', 'por_firmar'])->count();
+            Route::get('/horarios', [HorarioAtencionController::class, 'index'])
+                ->name('horarios.index');
 
             return view('dashboard', compact('totalSocios', 'pendientesFirma'));
         })->name('dashboard');
