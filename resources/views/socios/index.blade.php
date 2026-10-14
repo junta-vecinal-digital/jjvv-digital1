@@ -95,6 +95,21 @@
                                 @endif
                             </td>
 
+                            <td class="px-6 py-4 text-xs">
+                                @if($socio->cita)
+                                    <div class="font-bold text-indigo-600">
+                                        {{ $socio->cita->fecha_hora_inicio->format('d/m/Y H:i') }} hrs
+                                    </div>
+                                    <div class="text-[11px] text-slate-400">
+                                        {{ $socio->cita->fecha_hora_inicio->diffForHumans() }}
+                                    </div>
+                                @elseif($socio->estado === 'por_firmar' || $socio->estado === 'pendiente_firma')
+                                    <span class="text-amber-600 font-medium italic">Sin agendar</span>
+                                @else
+                                    <span class="text-slate-400 italic">-</span>
+                                @endif
+                            </td>
+
                             <!-- Estado Legal -->
                             <td class="px-6 py-4">
                                 @if($socio->estado === 'pendiente_firma')

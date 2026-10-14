@@ -6,7 +6,7 @@
     </div>
 
     <!-- Tarjetas del Dashboard -->
-    <div class="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-6 2xl:gap-7.5">
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 2xl:gap-7.5">
         
         <!-- Tarjeta 1: Total Socios Activos -->
         <div class="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
@@ -33,21 +33,6 @@
                 <div class="flex h-11 w-11 items-center justify-center rounded-full bg-amber-50 text-amber-600">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
-                    </svg>
-                </div>
-            </div>
-        </div>
-
-        <!-- Tarjeta 3: Certificados del Mes -->
-        <div class="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
-            <div class="flex items-center justify-between">
-                <div>
-                    <span class="text-sm font-medium text-slate-500">Certificados Este Mes</span>
-                    <h4 class="text-2xl font-bold text-slate-800 mt-1">{{ $totalCertificados }}</h4>
-                </div>
-                <div class="flex h-11 w-11 items-center justify-center rounded-full bg-emerald-50 text-emerald-600">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
                 </div>
             </div>
